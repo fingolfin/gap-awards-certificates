@@ -1,3 +1,4 @@
+%!TEX TS-program = lualatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Drake Certificate
 % LaTeX Template
@@ -22,6 +23,23 @@
 	a4paper, % Paper size, use 'a4paper' for A4 (default) or 'letterpaper' for US letter (you may want to adjust margins afterwards)
 ]{CSDrakeCertificate}
 
+\usepackage{soul}% for the underlining 
+\usepackage[doublespacing]{setspace}% just to set the samples further apart
+
+%\usepackage{emerald}% for 1-4
+%\usepackage{frcursive}% for 5
+%\usepackage{inslrmin}% for 6
+
+\usepackage[T1]{fontenc}
+\usepackage{fontspec}
+
+%\newfontfamily\handwritingfont{QTHandwriting}
+\newfontfamily\handwritingfont{Zapfino}
+
+%\usepackage{chancery}
+%\usepackage[T1]{fontenc}
+
+
 %---------------------------------------------------------------------------------
 %	CERTIFICATE INFORMATION
 %---------------------------------------------------------------------------------
@@ -39,7 +57,8 @@
 \leftlineoptional{} % A subtitle to the title under the left line, useful to qualify the title, can be left empty if not required (i.e. \leftlineoptional{})
 
 \rightlinetitle{Signed} % The title under the right line, will be made uppercase automatically and can be left empty if not required (i.e. \rightlinetitle{}) in which case the left line will be horizontally centered (if present)
-\rightlineoptional{on behalf of the GAP Council} % A subtitle to the title under the right line, useful to qualify the title, can be left empty if not required (i.e. \rightlineoptional{})
+\rightlineoptional{}
+%\rightlineoptional{on behalf of the GAP Council} % A subtitle to the title under the right line, useful to qualify the title, can be left empty if not required (i.e. \rightlineoptional{})
 
 %----------------------------------------------------------------------------------------
 
@@ -108,6 +127,7 @@
 			\node [rectangle, fill=black, minimum width=0.35\textwidth, inner ysep=2pt] (leftline) at (0, 0){}; % Left line
 			\node [rectangle, anchor=north, minimum height=20pt] at ($(leftline.south)-(0, 3pt)$) {{\LARGE\sourcesanspro{\textbf{\MakeUppercase{\leftlinetitle}}}}}; % Top title
 			\node [rectangle, anchor=north, minimum height=20pt] at ($(leftline.south)-(0, 20pt)$) {{\large\sourcesanspro{\textit{\leftlineoptional}}}}; % Subtitle
+			\node at ($(leftline.south)+(0, 6mm)$) { {\LARGE\today}};
 		\end{tikzpicture}%
 	}
 	\ifdefempty{\leftlinetitle}{}{\ifdefempty{\rightlinetitle}{}{\hfill}} % If both lines have titles and are therefore visible, space them out horizontally
@@ -116,6 +136,7 @@
 			\node [rectangle, fill=black, minimum width=0.35\textwidth, inner ysep=2pt] (rightline) at (0, 0){}; % Right line
 			\node [rectangle, anchor=north, minimum height=20pt] at ($(rightline.south)-(0, 3pt)$) {{\LARGE\sourcesanspro{\textbf{\MakeUppercase{\rightlinetitle}}}}}; % Top title
 			\node [rectangle, anchor=north, minimum height=20pt] at ($(rightline.south)-(0, 20pt)$) {{\large\sourcesanspro{\textit{\rightlineoptional}}}}; % Subtitle
+			\node at ($(rightline.south)+(0, 6mm)$) { {\LARGE\handwritingfont{}The GAP Council}};
 		\end{tikzpicture}%
 	}
 \end{center}
