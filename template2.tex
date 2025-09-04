@@ -1,4 +1,4 @@
-\documentclass[landscape]{article}
+\documentclass[a4paper,landscape]{article}
 \usepackage{wallpaper}
 \usepackage{niceframe}
 \usepackage{xcolor}
@@ -8,6 +8,10 @@
 \geometry{tmargin=.5cm,bmargin=.5cm,
 lmargin=.5cm,rmargin=.5cm}
 \usepackage{multicol}
+
+
+\usepackage[oldstylenums]{kpfonts}
+
 \setlength{\columnseprule}{0.4pt}
 \columnwidth=0.3\textwidth
 
@@ -15,7 +19,7 @@ lmargin=.5cm,rmargin=.5cm}
 
 \TileWallPaper{4cm}{2cm}{tiling.png}
 
-~\vspace{-1.5mm}
+~\vspace{+1.5mm}
 
 \centering
 ~
@@ -33,16 +37,18 @@ lmargin=.5cm,rmargin=.5cm}
 {\border \char115} % lower right
 {\centering
 
+\smallskip
+
 \begin{minipage}{.9\textwidth}
 \centering
 \includegraphics[height=1.1cm]{gaplogo.pdf}
 \end{minipage}
-\vspace{-7mm}
+\vspace{-9mm}
 
 \curlyframe[.9\columnwidth]{
 
 \textcolor{red!10!black!90}
-{\small }\\
+{\small }\\[3mm]
 
 \textcolor{green!10!black!90}{
 \tiny In honour of their significant contributions to the GAP system we hereby award the}
@@ -52,7 +58,7 @@ lmargin=.5cm,rmargin=.5cm}
 
 %\textcolor{red!30!black!90}{\textit{GAP excellence award}}
 
-\textcolor{black}{\large \textsc{GAP excellence award}}
+\textcolor{black}{\Large \textbf{GAP EXCELLENCE AWARD}}
 
 \vspace{2mm}
 
@@ -75,6 +81,9 @@ Dr. DavidRestless  & &  Dr. Peter Awakened & & Dr. John Workerhard \\
 Head of  Department & & Examinor & & Academic Advisor \\ 
 \end{tabular}
 }}}}
+
+\medskip
+
 \end{minipage}
 }
 \end{document}
