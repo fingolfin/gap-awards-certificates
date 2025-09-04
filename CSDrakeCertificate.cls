@@ -43,6 +43,8 @@
 
 \setlength{\parindent}{0pt} % Suppress paragraph indentation
 
+\usepackage[svgnames]{xcolor}
+
 %----------------------------------------------------------------------------------------
 %	MARGINS
 %----------------------------------------------------------------------------------------
@@ -80,9 +82,9 @@
 	\begin{tikzpicture}[remember picture, overlay]
 		\draw[draw=black, line width=20pt] (current page.north west) rectangle (current page.south east); % Thick rectangle around the page
 		
-		\draw[draw=black, line width=2pt] ($(current page.north west)-(-15pt, 15pt)$) rectangle ($(current page.south east)+(-15pt, 15pt)$); % Outer thin rectangle
-		\draw[draw=black, line width=2pt] ($(current page.north west)-(-21pt, 21pt)$) rectangle ($(current page.south east)+(-21pt, 21pt)$); % Middle thin rectangle
-		\draw[draw=black, line width=2pt] ($(current page.north west)-(-27pt, 27pt)$) rectangle ($(current page.south east)+(-27pt, 27pt)$); % Inner thin rectangle
+		\draw[draw=Crimson, line width=2pt] ($(current page.north west)-(-15pt, 15pt)$) rectangle ($(current page.south east)+(-15pt, 15pt)$); % Outer thin rectangle
+		\draw[draw=Crimson, line width=2pt] ($(current page.north west)-(-21pt, 21pt)$) rectangle ($(current page.south east)+(-21pt, 21pt)$); % Middle thin rectangle
+		\draw[draw=Crimson, line width=2pt] ($(current page.north west)-(-27pt, 27pt)$) rectangle ($(current page.south east)+(-27pt, 27pt)$); % Inner thin rectangle
 		
 		\draw [fill=black] (current page.north west) -- ($(current page.north west)-(0cm, 3cm)$) -- ($(current page.north west)+(3cm, 0cm)$) -- cycle; % Top left triangle
 		\draw [fill=black] (current page.north east) -- ($(current page.north east)-(0cm, 3cm)$) -- ($(current page.north east)-(3cm, 0cm)$) -- cycle; % Top right triangle
