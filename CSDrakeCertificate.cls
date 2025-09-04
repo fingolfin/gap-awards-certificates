@@ -65,12 +65,22 @@
 %----------------------------------------------------------------------------------------
 
 \usepackage[utf8]{inputenc} % Required for inputting international characters
-\usepackage[T1]{fontenc} % Output font encoding for international characters
+%\usepackage[T1]{fontenc} % Output font encoding for international characters
 
-\usepackage[default, semibold]{sourceserifpro} % Use the Source Serif Pro as the default font with semibold for \bfseries
-\newcommand{\sourceserifproblack}[1]{{\fontseries{k}\fontshape{n}\selectfont #1}} % New command for using the black font weight
+%\usepackage{fontspec}
 
-\newcommand{\sourcesanspro}[1]{{\fontfamily{SourceSansPro-LF}\selectfont#1}} % Custom Source Sans Pro font command
+%\newfontfamily\handwritingfont{Zapfino}
+
+\usepackage[default, semibold, otf]{sourceserifpro} % Use the Source Serif Pro as the default font with semibold for \bfseries
+\usepackage{sourcesanspro}
+
+%\newcommand{\sourceserifproblack}[1]{{\fontseries{k}\fontshape{n}\selectfont #1}} % New command for using the black font weight
+%\newcommand{\sourcesanspro}[1]{{\fontfamily{SourceSansPro-LF}\selectfont#1}} % Custom Source Sans Pro font command
+
+\newcommand{\sourceserifproblack}[1]{{\sourceserifproextreme\textbf{#1}}} % New command for using the black font weight
+\renewcommand{\sourcesanspro}[1]{{\sourcesansproextreme{#1}}} % New command for using the black font weight
+
+
 
 \usepackage{microtype} % Improve justification
 

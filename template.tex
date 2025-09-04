@@ -1,4 +1,4 @@
-%!TEX TS-program = lualatex
+% !TEX TS-program = lualatex
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Drake Certificate
 % LaTeX Template
@@ -23,32 +23,20 @@
 	a4paper, % Paper size, use 'a4paper' for A4 (default) or 'letterpaper' for US letter (you may want to adjust margins afterwards)
 ]{CSDrakeCertificate}
 
-\usepackage{soul}% for the underlining 
-\usepackage[doublespacing]{setspace}% just to set the samples further apart
-
-%\usepackage{emerald}% for 1-4
-%\usepackage{frcursive}% for 5
-%\usepackage{inslrmin}% for 6
-
-\usepackage[T1]{fontenc}
-\usepackage{fontspec}
-
-%\newfontfamily\handwritingfont{QTHandwriting}
 \newfontfamily\handwritingfont{Zapfino}
-
-%\usepackage{chancery}
-%\usepackage[T1]{fontenc}
-
 
 %---------------------------------------------------------------------------------
 %	CERTIFICATE INFORMATION
 %---------------------------------------------------------------------------------
 
+\recipient{John Smith} % Recipient name, will be made uppercase automatically
+
+
+
 \heading{GAP award} % The main certificate heading at the top, typically will be "Certificate", "Award", "Congratulations" or similar. Will be made uppercase automatically.
 
 \subheading{of excellence} % The subheading to the main heading, useful for qualifying the main heading, leave empty if not required (i.e. \subheading{})
 
-\recipient{John Smith} % Recipient name, will be made uppercase automatically
 
 \largedescription{For significant contributions to the GAP system.} % The large description line under the recipient name, useful for stating what the certificate is for or writing a congratulatory message, leave empty if not required (i.e. \largedescription{})
 \smalldescription{} % The smaller description under the large description, useful for a further classification of the certificate, leave empty if not required (i.e. \smalldescription{})
